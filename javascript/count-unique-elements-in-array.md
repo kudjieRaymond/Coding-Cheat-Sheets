@@ -9,10 +9,12 @@ eg: Let's try and Get Reccuring item  in an array
 
 function recurringItem(arr)
 {
+	//Create an empty object
 	let itemMap ={}
 	
 	for(let item of arr)
 	{
+		//check if the element is already in the map object
 		if(itemMap.hasOwnProperty(item)){
 			itemMap[item]++
 		}else{
@@ -31,8 +33,9 @@ function recurringItem(arr)
 function reccuringItem(arr){
 
 
-	let itemMap arr.reduce((accumulator, item)=>{
+	let itemMap = arr.reduce((accumulator, item)=>{
 
+		//if the item is already in the accumulator {} increment by 1
 		accumulator[item] = accumulator[item] ?  ++accumulator[item]: 1
 
 		return accumulator
